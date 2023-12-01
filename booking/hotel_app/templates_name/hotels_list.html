@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Список отелей</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Список отелей</h1>
+
+    {% if hotels %}
+        <ul>
+            {% for hotel in hotels %}
+                <li>
+                    <h2>{{ hotel.name }}</h2>
+                    <p>Местоположение: {{ hotel.location }}</p>
+                    <p>Описание: {{ hotel.description }}</p>
+                    <p>Рейтинг: {{ hotel.rating }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Нет доступных отелей.</p>
+    {% endif %}
+
+</body>
+</html>
