@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Room</title>
+</head>
+<body>
+    <h1>Book a Room</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="check_in_date">Check-in Date:</label>
+        <input type="date" id="check_in_date" name="check_in_date">
+
+        <label for="check_out_date">Check-out Date:</label>
+        <input type="date" id="check_out_date" name="check_out_date">
+
+        <button type="submit">Book</button>
+    </form>
+</body>
+</html>

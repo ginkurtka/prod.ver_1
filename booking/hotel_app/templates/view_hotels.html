@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Hotels</title>
+</head>
+<body>
+    <h1>Hotels</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Location</th>
+                <th>Description</th>
+                <th>Rating</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for hotel in hotels %}
+                <tr>
+                    <td>{{ hotel.name }}</td>
+                    <td>{{ hotel.location }}</td>
+                    <td>{{ hotel.description }}</td>
+                    <td>{{ hotel.rating }}</td>
+                    <td>
+                        <a href="{% url 'manage_hotel_detail' hotel.id %}">View Details</a>
+                        <a href="{% url 'edit_hotel' hotel.id %}">Edit</a>
+                        <a href="{% url 'delete_hotel' hotel.id %}">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

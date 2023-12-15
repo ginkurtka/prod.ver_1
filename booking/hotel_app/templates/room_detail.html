@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Room Details</title>
+</head>
+<body>
+    <h1>Room Details</h1>
+    <h2>{{ room.room_type }} at {{ room.hotel.name }}</h2>
+    <img src="{{ room.photos.url }}" alt="Room Image">
+    <p>Price per Night: {{ room.price_per_night }}</p>
+    <p>Available: {% if room.available %} Yes {% else %} No {% endif %}</p>
+</body>
+</html>

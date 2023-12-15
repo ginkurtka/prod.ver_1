@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Bookings</title>
+</head>
+<body>
+    <h1>My Bookings</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Hotel</th>
+                <th>Room Type</th>
+                <th>Check-in Date</th>
+                <th>Check-out Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for booking in user_bookings %}
+            <tr>
+                <td>{{ booking.room.hotel.name }}</td>
+                <td>{{ booking.room.room_type }}</td>
+                <td>{{ booking.check_in_date }}</td>
+                <td>{{ booking.check_out_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
