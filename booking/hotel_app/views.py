@@ -2,12 +2,15 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .models import Hotel, Room, Booking, Review
 
-def view_hotels(request):
+def view_hotels(request, ):
     hotels = Hotel.objects.all()
-    return render(request, 'view_hotels.html', {'hotels': hotels})
+    print(hotels[0], 'blyad')
+    print(request.get_full_path(), 'blyad')
+    return render(request, 'home_page.html', {'hotels': hotels, 'test': 'test'})
 
-def hotel_detail(request, hotel_id):
-    hotel = Hotel.objects.get(id=hotel_id)
+def hotel_detail(request, item_id):
+    print(item_id, 'blyat2')
+    hotel = Hotel.objects.get(id=item_id)
     return render(request, 'hotel_detail.html', {'hotel': hotel})
 
 def view_rooms(request, hotel_id):

@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hotel Details</title>
-</head>
-<body>
+{% extends 'base_layout.html' %} {% block title %}Hotel details{% endblock %}
+{% block content %}
+<div class="features">
     <h1>Hotel Details</h1>
     <h2>{{ hotel.name }}</h2>
     <p><strong>Location:</strong> {{ hotel.location }}</p>
@@ -24,6 +20,10 @@
         {% endfor %}
     </ul>
 
-    <a href="{% url 'leave_review' hotel_id=hotel.id %}">Leave a Review</a>
-</body>
-</html>
+    {% comment %} <a href="{% url 'leave_review' hotel_id=hotel.id %}">Leave a Review</a> {% endcomment %}
+</div>
+{% endblock %}
+
+
+
+   

@@ -1,0 +1,11 @@
+certifi @ file:///private/tmp/python-certifi-20231008-5561-13s00fm/certifi-2023.7.22
+cffi @ file:///private/tmp/cffi-20231014-5567-1hyue8f/cffi-1.16.0
+cryptography @ file:///private/tmp/python-cryptography-20231016-6508-1s2r8nh/cryptography-41.0.4
+mutagen @ file:///private/tmp/python-mutagen-20231008-5554-1csby1/mutagen-1.47.0
+packaging @ file:///private/tmp/python-packaging-20231006-5756-1k1e5t6/packaging-23.2
+pycparser @ file:///private/tmp/pycparser-20231013-5787-1anpge2/pycparser-2.21
+Pygments @ file:///private/tmp/pygments-20231008-5534-zuvwpt/Pygments-2.16.1
+pytz @ file:///private/tmp/python-pytz-20231006-5495-1z0ldzn/pytz-2023.3.post1
+PyYAML @ file:///private/tmp/pyyaml-20230717-6270-1iiwi1j/PyYAML-6.0.1
+six==1.16.0
+typing_extensions @ file:///private/tmp/python-typing-extensions-20231008-5501-1ralzsu/typing_extensions-4.8.0
