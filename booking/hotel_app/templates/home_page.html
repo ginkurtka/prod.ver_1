@@ -1,0 +1,29 @@
+{% extends 'base_layout.html' %} {% block title %}List of Hotels{% endblock %}
+{% block content %}
+<div class="features">
+    <h3>List of Hotels</h3>
+
+    {% if hotels %}
+    <ul class = "hotel_list">
+        {% for hotel in hotels %}
+        <li>
+            <h4>{{ hotel.name }}</h4>
+            <p><strong>Location:</strong> {{ hotel.location }}</p>
+            <p><strong>Description:</strong> {{ hotel.description }}</p>
+            <p><strong>Rating:</strong> {{ hotel.rating }}</p>
+            <img
+                src="{{ hotel.photos.url }}"
+                alt="{{ hotel.name }} Photo"
+                width="200"
+            />
+            <p><strong>Created At:</strong> {{ hotel.created_at }}</p>
+            <p><strong>Updated At:</strong> {{ hotel.updated_at }}</p>
+            <a href="{% url 'hotel_detail' hotel.id %}">View Details</a>
+        </li>
+        {% endfor %}    
+    </ul>
+    {% else %}
+    <p>No hotels available.</p>
+    {% endif %}
+</div>
+{% endblock %}

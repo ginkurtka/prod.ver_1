@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>User Profile</title>
-</head>
-<body>
-    <h1>User Profile</h1>
-    <div>
-        <h2>{{ user.username }}</h2>
-        <p><strong>Email:</strong> {{ user.email }}</p>
-    </div>
-</body>
-</html>
+{% extends 'base_layout.html' %} {% block title %}List of Hotels{% endblock %}
+{% block content %}
+<h1>User Profile</h1>
+{% comment %}
+        <div>
+            <h2>{{ user.username }}</h2>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+        </div>
+        {% endcomment %}
+{% endblock %}
+
+
