@@ -1,7 +1,7 @@
 {% load static %}
 <html>
     <head>
-        <title>Онлайн магазин книг</title>
+        <title>Online Booking Hotels</title>
         <link
             rel="stylesheet"
             type="text/css"
@@ -13,9 +13,9 @@
     <body>
         <header class="header_section">
             <nav class="header_navbar">
-                <a class = "header_nav_link" href="/hotels">Hotels</a>
-                <a class = "header_nav_link" href="/user/profile/">Profile</a>
-                <a class = "header_nav_link" href="/users/register/">register</a>
+                <a class = "header_nav_link" href="/hotels">Главная</a>
+                <a class = "header_nav_link" href="{% url 'register' %}">Регистрация</a>
+                <a class = "header_nav_link" href="{% url 'login' %}">Войти</a>
                 <a class = "header_nav_link" href="hotels">My Link</a>
             </nav>
         </header>

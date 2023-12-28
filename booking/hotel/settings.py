@@ -1,14 +1,13 @@
-from pathlib import Path
-import os
-import environ
+#from pathlib import Path
+#import os
+#Wimport environ
 
-env = environ.Env()
+#env = environ.Env()
+from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
-
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = 'django-insecure-!9&ck@f+n5)2&1b)3you)1@de)#bjecxk14w$8vt8+#n=lrw0l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
